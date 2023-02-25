@@ -9,6 +9,8 @@ import tornado.httpserver
 import tornado.ioloop
 
 from services.login_handler import CLoginHandler
+from scheduler.scheduler_base import CScheduler
+from watcher.watch_base import CWatcher
 
 if __name__ == '__main__':
     # 启动日志
@@ -21,9 +23,9 @@ if __name__ == '__main__':
     # 初始化中间件
 
     # 注册定时任务
-
+    CScheduler.start()
     # 注册监控
-
+    CWatcher.init()
     # 服务启动
     server = tornado.httpserver.HTTPServer(application)
     server.bind(8080)

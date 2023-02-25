@@ -3,14 +3,28 @@
 # @File: scheduler_base.py
 # @Author: Hung
 # @Time: 2023/2/24 8:14
+import platform
 import importlib
 from apscheduler.schedulers.tornado import TornadoScheduler
+from multiprocessing import Manager, Lock
+from ctypes import c_bool
+
+lock = Lock()
+isRegister = Manager().Value(c_bool, False) if platform.system() != 'windows' else False
 
 
 class CScheduler:
     client = None
+    # 配置添加定时任务
     taskDict = {}
-    # TODO 多进程只在一个进程注册
+
+    # 多进程只在一个进程注册
+    @classmethod
+    def start(cls):
+        with lock:
+            if not isRegister.value:
+                cls.init()
+                isRegister.value = True
 
     @classmethod
     def init(cls):

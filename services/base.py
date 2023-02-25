@@ -4,10 +4,12 @@
 # @Author: Hung
 # @Time: 2023/2/23 23:05
 import importlib
+from typing import Optional, Awaitable
+
 import tornado.web
 
 
-class CBaseHandler(tornado.web.Application):
+class CBaseHandler(tornado.web.RequestHandler):
     def initialization(self):
         pass
 
