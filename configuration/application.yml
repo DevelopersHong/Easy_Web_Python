@@ -1,1 +1,46 @@
+dev:
+  server:
+    ip: 127.0.0.1
+    port: 8080
+    num: 2
+    key: 123456
+  mysql:
+    ip: 127.0.0.1
+    port: 8080
+    user: root
+    db: test
+    password: XXXXXX
+  log:
+    level: info
+    path: ./
+test:
+  server:
+    ip: 127.0.0.1
+    port: 8080
+    num: 2
+    key: 123456
+  mysql:
+    ip: 127.0.0.1
+    port: 8080
+    user: root
+    db: test
+    password: XXXXXX
+  log:
+    level: info
+    path: ./
+release:
+  server:
+    ip: 127.0.0.1
+    port: 8080
+    num: 2
+    key: 123456
+  mysql:
+    ip: 127.0.0.1
+    port: 8080
+    user: root
+    db: test
+    password: XXXXXX
+  log:
+    level: info
+    path: ./
 
