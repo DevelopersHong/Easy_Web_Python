@@ -15,8 +15,10 @@ class CFileWatchHandler(RegexMatchingEventHandler):
 
     @staticmethod
     def rebuild_config():
+        # 重新加载项目配置
         pass
 
     @staticmethod
     def rebuild_scheduler():
+        # 重新注册定时任务
         pass

@@ -15,7 +15,7 @@ isRegister = Manager().Value(c_bool, False) if platform.system() != 'windows' el
 
 class CScheduler:
     client = None
-    # 配置添加定时任务
+    # 读取配置添加定时任务
     taskDict = {}
 
     # 多进程只在一个进程注册

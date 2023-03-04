@@ -1,0 +1,3 @@
+task:
+  scheduler.task1.func: {month='', day_of_week='', hour='', minute=''}
+  scheduler.task2.func: {month='', day_of_week='', hour='', minute=''}
